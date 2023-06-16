@@ -21,7 +21,8 @@ try {
   console.error(error);
 }
 
-app.use(cors({ credentials: true, origin: "http://footcourse-backend-production.up.railway.app" }));
+app.use(cors({ credentials: true, origin: "*" }));
+//app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
