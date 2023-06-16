@@ -15,6 +15,22 @@ Content-Type: application/json
 }
 
 ###
+POST  https://footcourse-backend-production.up.railway.app/login
+Content-Type: application/json
+
+{
+    "email": "nashrul@gmail.com",
+    "password": "nashrul123"
+ 
+}
+
+###
+GET https://footcourse-backend-production.up.railway.app/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJIYWtpbSIsImVtYWlsIjoiaGFraW1AZ21haWwuY29tIiwiaWF0IjoxNjgzMjIwMTEyLCJleHAiOjE2ODMyMjAxMjd9.K0NQ2Sy9jNwq6DCiwbGtUmeklfBG2gFTen7FQZEet2U
+
+
+
+###
 GET  http://localhost:5000/token
 
 ###
