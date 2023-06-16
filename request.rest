@@ -1,0 +1,68 @@
+
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJIYWtpbSIsImVtYWlsIjoiaGFraW1AZ21haWwuY29tIiwiaWF0IjoxNjgzMjIwMTEyLCJleHAiOjE2ODMyMjAxMjd9.K0NQ2Sy9jNwq6DCiwbGtUmeklfBG2gFTen7FQZEet2U
+
+
+
+###
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "nashrul@gmail.com",
+    "password": "nashrul123"
+ 
+}
+
+###
+GET  http://localhost:5000/token
+
+###
+DELETE   http://localhost:5000/logout
+
+###
+GET  http://localhost:5000/learn
+
+
+###
+GET  http://localhost:5000/boot/
+
+
+###
+GET  http://localhost:5000/train/technique
+
+###
+GET  http://localhost:5000/train/technique/dribbling/Modul 1/video
+
+###
+GET  http://localhost:5000/train/technique/dribbling/Modul 1
+
+###
+GET  http://localhost:5000/train/fitness
+
+###
+GET  http://localhost:5000/train/fitness/Modul 1
+
+###
+GET  http://localhost:5000/train/fitness/Modul 1/video
+
+
+###
+GET  http://localhost:5000/test/technique
+
+###
+GET  http://localhost:5000/test/technique/Dribbling Wizard
+
+###
+GET  http://localhost:5000/test/fitness/Speed Test
+
+###
+PATCH  http://localhost:5000/users/hakim
+Content-Type: application/json
+
+{
+    "Agility":"30"
+}
+
+###
+GET   http://localhost:5000/users/nashrul
