@@ -27,4 +27,5 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(router);
 
-app.listen(5000, () => console.log("Server Running at port 5000"));
+//app.listen(5000, () => console.log("Server Running at port 5000"));
+app.listen(port, "0.0.0.0", () => console.log("Server Running at port 5000"));
