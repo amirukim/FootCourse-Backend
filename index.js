@@ -21,7 +21,7 @@ try {
   console.error(error);
 }
 
-app.use(cors({ credentials: true }));
+app.use(cors({ credentials: true, origin:"https://main--steady-snickerdoodle-a92d53.netlify.app" }));
 //app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(cookieParser());
 app.use(express.json());
