@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 async function startServer() {
-  const port = process.env.PORT || 5000;
+  const port = process.env.PORT || 3306;
   try {
     await db.authenticate();
     console.log("Database connected...");
@@ -28,7 +28,7 @@ async function startServer() {
   app.use(router);
 
   //app.listen(5000, () => console.log("Server Running at port 5000"));
-  app.listen(port, () => console.log("Server Running at port 5000"));
+  app.listen(port, "127.0.0.1", () => console.log("Server Running at port 5000"));
 }
 
 startServer();
