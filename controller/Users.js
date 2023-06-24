@@ -15,10 +15,16 @@ export const getUsers = async (req, res) => {
 
 export const Register = async (req, res) => {
   const { name, email, password, position, confPassword } = req.body;
-  if (password !== confPassword) return res.status(400).json({ msg: "Password you enter doesnt same " });
-  const salt = await bcrypt.genSalt();
-  const hashPassword = await bcrypt.hash(password, salt);
+  if (password !== confPassword) {
+    return res.status(400).json({ msg: "Password you enter doesnt same" });
+  }
   try {
+    const existingUser = await Users.findOne({ email: email });
+    if (existingUser) {
+      return res.status(400).json({ msg: "Email is already taken" });
+    }
+    const salt = await bcrypt.genSalt();
+    const hashPassword = await bcrypt.hash(password, salt);
     await Users.create({
       name: name,
       email: email,
